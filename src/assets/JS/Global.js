@@ -133,13 +133,6 @@ $('.numbers').each(function () {
     });
 
 });
-// $('.onlyletters').each(function () { 
-//     jQuery(this).on('keypress input', function (event) { 
-//         soloLetras(this);
-//     });
-
-// });
-
 $(".capitalize").on('change').change(function () {
     if ($("#" + this.id).val() != "") {
         CapitalizePalabra(this);
@@ -148,9 +141,6 @@ $(".capitalize").on('change').change(function () {
 $('.onlyletters').each(function () { 
     jQuery(this).on('keypress input', function (event) { 
         if($("#"+this.id).val() !=""){
-            // if (event.type === 'keypress') { 
-            //     return onlyLetter(this); 
-            // } 
             if (event.type === 'input') { 
                 const bufferValue = $(this).val().replace(/[^A-Za-zñÑáéíóúÁÉÍÓÚäëïöüÄËÏÖÜ ]/g, ''); 
                 $(this).val(bufferValue); 
@@ -158,17 +148,6 @@ $('.onlyletters').each(function () {
         }
     }); 
 });
-// $('.onlyletters').on('keypress').keypress(function () {
-//     soloLetras(this);
-// });
-
-// $('.letters').each(function () {
-//     jQuery(this).on('change', function (event) {
-//         if ($(this).val() != "") {
-//             CapitalizePalabra(this);
-//         }
-//     });
-// });
 function OnlyLetter(e) {
     let key = e.keyCode || e.which;
     let tecla = String.fromCharCode(key).toLowerCase();
