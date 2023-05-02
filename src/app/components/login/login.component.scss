@@ -1,0 +1,213 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    height: 100vh;
+  }
+  .containwhite {
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      overflow-y: hidden;
+      height: 910px;
+    }
+  .Pophins{
+      font-family: 'Poppins', sans-serif;
+      color: gray;
+  }
+  .Pophins-white{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  .boldpoph200{
+      font-weight: 200;
+  }
+  .boldpoph300{
+      font-weight: 300;
+  }
+  .boldpoph400{
+      font-weight: 400;
+  }
+  .boldpoph500{
+      font-weight: 500;
+  }
+  .boldpoph600{
+      font-weight: 600;
+  }
+  .Size18{
+      font-size: 18px;
+  }
+  .Size20{
+      font-size: 20px;
+  }
+  .Size22{
+      font-size: 22px;
+  }
+  .Size24{
+      font-size: 24px;
+  }
+  .Size26{
+      font-size: 26px;
+  }
+  .Size28{
+      font-size: 28px;
+  }
+  .Size30{
+      font-size: 30px;
+  }
+  .img-login{
+      width: 100%;
+      margin: -345px 0px 0px 0px !important;
+  }
+  .card-center{
+      margin: 200px 120px 0px 120px;
+      border-radius: 23px;
+  }
+  .text-center{
+      text-align: center;
+  }
+  .login-form{
+      background-color: #fafafa;
+  }
+  
+  
+  .signupFrm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form {
+      background-color: white;
+      width: 400px;
+      border-radius: 8px;
+      padding: 20px 40px;
+      box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    }
+    
+    .title {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+  
+    .inputContainer {
+      position: relative;
+      height: 45px;
+      width: 90%;
+      margin-bottom: 17px;
+    }
+  
+    .input {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      border: 1px solid #DADCE0;
+      border-radius: 7px;
+      font-size: 16px;
+      padding: 0 20px;
+      outline: none;
+      background: none;
+      z-index: 1;
+    }
+    
+    /* Hide the placeholder texts (a) */
+    
+    ::placeholder {
+      color: transparent;
+    }
+  
+    .label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 0 4px;
+      background-color: white;
+      color: #DADCE0;
+      font-size: 16px;
+      transition: 0.5s;
+      z-index: 0;
+    }
+  
+    .submitBtn {
+      display: block;
+      margin-left: auto;
+      padding: 15px 30px;
+      border: none;
+      background-color: #6d7bbf ;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+    
+    .submitBtn:hover {
+      background-color: #8394e6;
+      transform: translateY(-2px);
+    }
+  
+    .input:focus + .label {
+      top: -7px;
+      left: 3px;
+      z-index: 10;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6d7bbf ;
+    }
+    .input:focus {
+      border: 2px solid #6d7bbf ;
+    }
+    .input:not(:placeholder-shown)+ .label {
+      top: -7px;
+      left: 3px;
+      z-index: 10;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    
+    .is-invalid{
+      border: 2px solid red;
+      color: red;
+      &:focus{
+        border: 2px solid red;
+        color: red;
+      }
+      &:focus+.label{
+        color: red;
+      }
+    }
+    .is-invalidlabel{
+      color: red;
+    }
+    .has-error-select{
+      border: 2px solid red;
+      color: red;
+    }
+    
+  
+    @media (max-width: 800px) {
+      .menu {
+        background: blue;
+      }
+    }
+      @media (min-width: 50px) and (max-width: 800px) {
+        .img-login {
+          display: none;
+        }
+    
+        .signupFrm {
+          margin-left: 12px;
+          margin-right: 12px;
+        }
+      }
+    
+    @media (min-width: 1280px) {
+      .menu {
+        background: green;
+      }
+    }

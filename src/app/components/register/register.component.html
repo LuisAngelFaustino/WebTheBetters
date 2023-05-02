@@ -1,0 +1,65 @@
+<div class="containtRegisterUser">
+    <form [formGroup]="form" (ngSubmit)="Save($event)">
+        <div class="">
+            <div class="col-12 col-md-5 form-moduls-in-RegisterUser">
+                <h1 class="title">Registrar Usuario</h1>
+                <div class="inputContainer col-12">
+                    <input id="NombreUsuario" type="text" [ngClass]="NombreUsuarioInvalidInput ? 'is-invalid input Names Util capitalize onlyletters' : 'input Names Util capitalize onlyletters'"
+                        placeholder="a" formControlName="NombreUsuario" (change)="Valid($event)" >
+                    <label for="" [ngClass]="NombreUsuarioInvalidInput ? 'is-invalidlabel label' : 'label'">Nombre</label>
+                </div>
+                <div class="inputContainer col-12">
+                    <input id="APUsuario" type="text" [ngClass]="APUsuarioInvalidInput ? 'is-invalid input Names Util capitalize onlyletters' : 'input Names Util capitalize onlyletters'"
+                        placeholder="a" formControlName="APUsuario" (change)="Valid($event)">
+                    <label for="" [ngClass]="APUsuarioInvalidInput ? 'is-invalidlabel label' : 'label'">Apellido Paterno</label>
+                </div>
+                <div class="inputContainer col-12">
+                    <input id="AMUsuario" type="text" [ngClass]="AMUsuarioInvalidInput ? 'is-invalid input Names Util capitalize onlyletters' : 'input Names Util capitalize onlyletters'"
+                        placeholder="a" formControlName="AMUsuario" (change)="Valid($event)">
+                    <label for="" [ngClass]="AMUsuarioInvalidInput ? 'is-invalidlabel label' : 'label'">Apellido Materno</label>
+                </div>
+                <div class="inputContainer col-12">
+                    <input id="TelefonoUsuario" type="tel" [ngClass]="TelefonoUsuarioInvalidInput ? 'is-invalid input numbers Telefono Util' : 'input numbers Telefono Util'"
+                        placeholder="a" formControlName="TelefonoUsuario" (change)="Valid($event)" (keypress)="Validkeypress($event)">
+                    <label for="" [ngClass]="TelefonoUsuarioInvalidInput ? 'is-invalidlabel label' : 'label'">Telefono</label>
+                </div>
+                <div class="inputContainer col-12">
+                    <input id="EmailUsuario" type="text" [ngClass]="EmailInvalidInput ? 'is-invalid input Email Util' : 'input Email Util'"
+                        placeholder="a" formControlName="EmailUsuario" (change)="Valid($event)">
+                    <label for="" [ngClass]="EmailInvalidInput ? 'is-invalidlabel label' : 'label'">Email</label>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="row">
+                        <div class="col-md-10 col-12">
+                            <div class="inputContainer col-12">
+                                <input id="PasswordUser" type="password" [ngClass]="PasswordUsuarioInvalidInput ? 'is-invalid input' : 'input'"
+                                    placeholder="a" formControlName="PasswordUsuario" (change)="Valid($event)">
+                                <label for="" [ngClass]="PasswordUsuarioInvalidInput ? 'is-invalidlabel label' : 'label'">Contraseña</label>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-1 icon-passwordUser">
+                            <i *ngIf="iconvisiblePassword == true" (click)="EventPassword()"  class="fa-sharp fa-solid fa-eye-slash icon-eye"></i>
+                            <i *ngIf="iconvisiblePassword == false" (click)="EventPassword()"  class="fa-solid fa-eye icon-eye"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="row">
+                        <div class="col-md-10 col-12">
+                            <div class="inputContainer col-12">
+                                <input id="PasswordConfirmUser" type="text" [ngClass]="PassUsConfirmInvalidInput ? 'is-invalid input' : 'input'"
+                                    placeholder="a" formControlName="PassUsConfirm">
+                                <label for="" [ngClass]="PassUsConfirmInvalidInput ? 'is-invalidlabel label' : 'label'">Contraseña</label>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-1 icon-passwordUser">
+                            <i *ngIf="iconvisiblePasswordConfirm == true" (click)="EventPasswordConfirm()" class="fa-sharp fa-solid fa-eye-slash icon-eye"></i>
+                            <i *ngIf="iconvisiblePasswordConfirm == false" (click)="EventPasswordConfirm()"  class="fa-solid fa-eye icon-eye"></i>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="submitBtn" value="Registrar" [disabled]="form.invalid">
+            </div>
+        </div>
+    </form>
+</div>

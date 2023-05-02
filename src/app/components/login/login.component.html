@@ -1,0 +1,27 @@
+<div class="containwhite">
+    <div class="row col-12 col-md-12">
+      <div class="col-md-7">
+        <img src="../../assets/img/login.jpg" class="img-login">
+      </div>
+      <div class="signupFrm col-md-5 col-12">
+        <form [formGroup]="form" novalidate class="form" (ngSubmit)="doLogin()">
+          <!-- <form [formGroup]="form" novalidate class="form" (ngSubmit)="doLogin()"> -->
+          <h1 class="title">Login</h1>
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" formControlName="Email"
+            [ngClass]="EmailInput ? 'is-invalid input' : 'input'">
+            <label for="" class="label" 
+            [ngClass]="EmailInput ? 'is-invalidlabel label' : 'label'">Email</label>
+          </div>
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" formControlName="Password"
+            [ngClass]="PasswordInput ? 'is-invalid input' : 'input'"/>
+            <label for="" class="label"
+            [ngClass]="PasswordInput ? 'is-invalidlabel label' : 'label'">Password</label>
+          </div>
+          <input type="submit" class="submitBtn" value="Ingresar" [disabled]="form.invalid">
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="header-font-ask container-fluid">
+    <div class="col-12 text-center Pophins-white boldpoph600 Size30 content-ask mb-3">
+        Que estás buscando
+    </div>
+
+    <div class="main container mb-3">
+        <div class="form-group has-search">
+            <!-- <span class="fa fa-search form-control-feedback"></span> -->
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+    </div>
+    <div class="container col-12 mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="circle" attr-header="/products" (click)="ReloadRouting($event)">
+                    <i class="fa-solid fa-cart-shopping icon-home" attr-header="/products"
+                        (click)="ReloadRouting($event)"></i>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="circle" attr-header="/buys" (click)="ReloadRouting($event)">
+                    <i class="fa-solid fa-sack-dollar icon-home" attr-header="/buys"
+                        (click)="ReloadRouting($event)"></i>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 ">
+                <div class="circle" attr-header="/reports" (click)="ReloadRouting($event)">
+                    <i class="fa-solid fa-file-circle-check icon-home" attr-header="/reports"
+                        (click)="ReloadRouting($event)"></i> <!-- <i class="fa-thin fa-gear icon-home"></i> -->
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="circle" attr-header="/settings" (click)="ReloadRouting($event)">
+                    <i class="fa-sharp fa-solid fa-gear icon-home" attr-header="/settings"
+                        (click)="ReloadRouting($event)"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

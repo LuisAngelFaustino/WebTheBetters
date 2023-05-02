@@ -1,0 +1,96 @@
+<app-header></app-header>
+<div class="col-12 divcontentmoduls">
+    <div class="div-icon-eye">
+        <i *ngIf="iconvisible == false" (click)="EventIconLis()" class="fa-sharp fa-solid fa-eye-slash icon-eye"></i>
+        <i *ngIf="iconvisible == true" (click)="EventIconLis()" class="fa-solid fa-eye icon-eye"></i>
+    </div>
+    <div class="row list-pading">
+        <div class="col-md-2">
+            <ul *ngIf="iconvisible == true" class="list-group">
+                <li class="list-group-item" (click)="EventaddActivate()">Registrar</li>
+                <li class="list-group-item" (click)="EventaddActivate()">Buscar</li>
+            </ul>
+        </div>
+        <div [ngClass]="iconvisible == false ? 'content-modul-visible col-md-12 col-12' : 'col-12 col-md-10'">
+          <form [formGroup]="form" (ngSubmit)="Save($event)">
+            <div class="container-moduls-in">
+                <div class="col-12 col-md-5 form-moduls-in">
+                    <h1 class="title">Registro</h1>
+                    <div class="inputContainer col-12">
+                      <input 
+                        type="text" [ngClass]="NameProductInvalidInput ? 'is-invalid input' : 'input'"   
+                        placeholder="a"
+                        formControlName="nameProduct">
+                      <label 
+                      for="" 
+                      [ngClass]="NameProductInvalidInput ? 'is-invalidlabel label' : 'label'"
+                      >Nombre del Producto</label>
+                    </div>
+                    <div class="inputContainer col-12">
+                      <select 
+                      name="" 
+                      id="" 
+                      class="input" 
+                      formControlName="select">
+                      [ngClass]="SelectValid ? 'has-error-select' : ''">
+                        <option value="0" disabled>Selecciona una opción</option>
+                        <option value="ref">Refaccionaria</option>
+                        <option value="cha">chacharas</option>
+                        <option value="ropilla">Ropa</option>
+                      </select>
+                      <label 
+                      for="" 
+                      [ngClass]="SelectValid ? 'is-invalidlabel label' : 'label'"
+                      >Categoría</label>
+                    </div> 
+                    <div class="inputContainer col-12">
+                      <input 
+                        type="text" [ngClass]="startingpriceInvalid ? 'is-invalid input' : 'input'"   
+                        placeholder="a"
+                        formControlName="startingprice">
+                      <label 
+                      for="" 
+                      [ngClass]="startingpriceInvalid ? 'is-invalidlabel label' : 'label'"
+                      >Precio Inicial</label>
+                    </div>
+
+                    <div class="inputContainer col-12">
+                      <input 
+                        type="text" [ngClass]="finalpriceInvalid ? 'is-invalid input' : 'input'"   
+                        placeholder="a"
+                        formControlName="finalprice">
+                      <label 
+                      for="" 
+                      [ngClass]="finalpriceInvalid ? 'is-invalidlabel label' : 'label'"
+                      >Precio Final</label>
+                    </div>
+
+                    <div class="inputContainer col-12">
+                      <input 
+                        type="text" [ngClass]="amountInvalid ? 'is-invalid input' : 'input'"   
+                        placeholder="a"
+                        formControlName="amount" >
+                      <label 
+                      for="" 
+                      [ngClass]="amountInvalid ? 'is-invalidlabel label' : 'label'"
+                      >Cantidad</label>
+                    </div>
+                    <div class="inputContainer col-12">
+                      <input 
+                        type="text" [ngClass]="descriptionInvalid ? 'is-invalid input' : 'input'"   
+                        placeholder="a"
+                        formControlName="description">
+                      <label 
+                      for="" 
+                      [ngClass]="descriptionInvalid ? 'is-invalidlabel label' : 'label'"
+                      >Descripción</label>
+                    </div>
+                    <input type="submit" class="submitBtn" value="Sign up" [disabled]="form.invalid">
+                    <!-- <button type="button" class="btn btn-primary" disabled="">Primary</button> -->
+                  </div>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
