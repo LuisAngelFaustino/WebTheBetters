@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators, FormControl } from "@angular/forms";
+import { validexpression } from "../../models/validators.model";
+import { ThisReceiver } from '@angular/compiler';
+declare var $: any;
+declare var Failednotification: any;
+declare var Successfulnotification: any;
+
 
 
 @Component({
@@ -10,8 +17,9 @@ import { Router } from '@angular/router';
 
 export class HomeComponent {
   constructor(
-    private router: Router
-  ) { }
+    private router: Router,
+  ) {
+   }
 
   ReloadRouting(event:any){
     const target = event.target as HTMLInputElement;

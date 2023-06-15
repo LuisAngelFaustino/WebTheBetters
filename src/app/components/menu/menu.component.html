@@ -1,0 +1,21 @@
+<div [ngClass]="iconvisiblemenu == false ? 'menu-betters-circle' : 'menu-betters mb-3'" class="menu-betters">
+    <div class="row mt-3">
+        <div class="col-md-12" (click)="ShowMenu()">
+            <i class="fa-solid fa-bars list-menu" [ngClass]="iconvisiblemenu == false ? 'list-menu-false' : 'list-menu-true'"></i>
+        </div>
+        <div *ngIf="this.iconvisiblemenu == true" class="icon-menus-persion">
+            <div class="col-md-12 mb-3 mt-3 mt-3 circle-menu">
+                <i class="fa-solid fa-cart-shopping icon-home-menu" attr-header="/products" (click)="ReloadRouting($event)"></i>
+            </div>
+            <div class="col-md-12 mb-3 mt-4 circle-menu">
+                <i class="fa-solid fa-sack-dollar icon-home-menu" attr-header="/buys" (click)="ReloadRouting($event)"></i>
+            </div>
+            <div class="col-md-12 mb-3 mt-4 circle-menu">
+                <i class="fa-solid fa-file-circle-check icon-home-menu" attr-header="/reports" (click)="ReloadRouting($event)"></i>
+            </div>
+            <div class="col-md-12 mb-3 mt-4 circle-menu">
+                <i class="fa-sharp fa-solid fa-gear icon-home-menu" attr-header="/settings" (click)="ReloadRouting($event)"></i>
+            </div>
+        </div>
+    </div>
+</div>

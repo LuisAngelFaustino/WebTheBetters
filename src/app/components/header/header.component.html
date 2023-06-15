@@ -1,25 +1,12 @@
 <div class="header-home">
     <div class="row col-12">
-        <div class="col-md-2">
-            <img src="../../assets/img/ICON-LOGO-BETTER.png" alt="icon-logo" class="icon-logo">
+        <div class="col-md-4">
+            <img src="../../assets/img/ICON-LOGO-BETTER.png" alt="icon-logo" class="icon-logo cursor" attr-header="/home" (click)="ReloadRouting($event)">
         </div>
-        <div class="col-md-10 mt-4 ">
-            <div class="nav-link-left">
-                <ul class="nav nav-pills">
-                    <div class="col-12 col-md-3">
-                        <li class="nav-item"><a class="nav-link boldpoph400 Size18 text-center" attr-header="/products" (click)="ReloadRouting($event)">Productos</a></li>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <li class="nav-item"><a class="nav-link boldpoph400 Size18 text-center" attr-header="/reports" (click)="ReloadRouting($event)">Reportes</a></li>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <li class="nav-item"><a class="nav-link boldpoph400 Size18 text-center" attr-header="/buys" (click)="ReloadRouting($event)">Venta</a></li>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <li class="nav-item"><a class="nav-link boldpoph400 Size18 text-center" attr-header="/settings" (click)="ReloadRouting($event)">Configuración</a></li>
-                    </div>
-    
-                </ul>
+        <div class="col-md-7 mt-4">
+            <div class="col-md-12 header-color">
+                <i class="fa-solid fa-user boldpoph400 Size22 text-center right-8px"></i>
+                <i class="fa-solid fa-caret-down Size26 cursor"></i>
             </div>
         </div>
     </div>

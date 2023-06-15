@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-buys',
   templateUrl: './buys.component.html',
@@ -7,4 +6,6 @@ import { Component } from '@angular/core';
 })
 export class BuysComponent {
 
+  constructor(
+  ){}
 }

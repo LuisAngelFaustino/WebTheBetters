@@ -170,6 +170,10 @@ function OnlyLetter(e) {
 }
 (function ($) {
     'use strict';
+    function isValidPassword(X){
+        X = X.trim();
+        return /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,16}$/.test(X);
+    }
     function isValidEmail(X) {
         X = X.trim();
         return /^\w+([\w+\.\+\-\+\_]?[\w+]?)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(X);
@@ -205,38 +209,49 @@ function OnlyLetter(e) {
 
     $.fn.ValidInputs = function (options) {
         var settings = $.extend({
-            class: "BorderInput-error",
-            classok: "select-form-ok",
-            classErrorok: "ok_errorinput",
+            classvalid: "is-invalid",
+            classErrorlabel: "is-invalidlabel",
         }, options);
         let valid = 0;
         let DatEspeciales = 0;
 
-        this.filter(".Telefono").each(function () {
-            if ($(this).val().trim() != "") {
-                if ($("#" + this.id).val().length < 10 || $("#" + this.id).val().length == 0) {
-                    // $(this).addClass(settings.class);
-                    // $("#" + this.id + "-check").removeClass(settings.classok);
-                    // $("#" + this.id + "-check").addClass(settings.classErrorok);
-                    // if (!$(".amaran-wrapper .amaran.awesome").is(":visible")) {
-                    //     NotificacionBanorte('awesome error', 'El número de teléfono debe ser de 10 dígitos');
-                    // }
-                    DatEspeciales++;
-                } else {
-                    // $(this).removeClass(settings.class);
-                    // $("#" + this.id + "-check").removeClass(settings.classErrorok);
-                    // $("#" + this.id + "-check").addClass(settings.classok);
+        this.filter(".password").each(function () {
+            if (($(this).val().trim() == "" || $(this).val() == null) && $(this).is(":visible")) {
+                $(this).removeClass(settings.classvalid);
+                $("#"+this.id+"label").removeClass(settings.classErrorlabel);       
+
+                valid++;
+            } else {
+                if (!isValidPassword($(this).val())) {
+                    Failednotification('Contraseña debe ser de 8-16 caracteres,con al menos un dígito, una letra minúscula,una letra mayúscula, al menos y un caracter especial sin espacios en blanco');
+                    valid++;
+                }else{
+                    $(this).removeClass(settings.classvalid);
+                    $("#"+this.id+"label").removeClass(settings.classErrorlabel);    
                 }
             }
         });
-        this.filter(".Email").each(function () {
+        this.filter(".phone").each(function () {
+            if ($(this).val().trim() != "") {
+                if ($("#" + this.id).val().length < 10 || $("#" + this.id).val().length == 0 || $("#" + this.id).val().length > 10) {
+                    Failednotification('El número de teléfono debe ser de 10 dígitos');
+                    DatEspeciales++;
+                }else{
+                    $(this).removeClass(settings.classvalid);
+                    $("#"+this.id+"label").removeClass(settings.classErrorlabel);  
+                }
+            }
+        });
+        this.filter(".email").each(function () {
             if (($(this).val().trim() == "" || $(this).val() == null) && $(this).is(":visible")) {
-                $(this).addClass(settings.class);
                 valid++;
             } else {
                 if (!isValidEmail($(this).val()) && $(this).is(":visible")) {
-                    $(this).addClass(settings.class);
+                    Failednotification('La estructura del correo es incorrecta');
                     valid++;
+                }else{
+                    $(this).removeClass(settings.classvalid);
+                    $("#"+this.id+"label").removeClass(settings.classErrorlabel);           
                 }
             }
         });
@@ -248,6 +263,9 @@ function OnlyLetter(e) {
                 if (!IsValidNames($(this).val()) && $(this).is(":visible")) {
                     $(this).addClass(settings.class);
                     valid++;
+                }else{
+                    $(this).removeClass(settings.classvalid);
+                    $("#"+this.id+"label").removeClass(settings.classErrorlabel);
                 }
             }
         });
@@ -457,6 +475,7 @@ function OnlyLetter(e) {
 }(jQuery));
 function DocumentReady(){
     $(document).ready(function () {
-
+        $(".phone").attr('maxlength','10');
     });
 }
+DocumentReady();

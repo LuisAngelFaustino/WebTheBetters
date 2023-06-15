@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImportscriptsService } from './services/utilities/importscripts.service';
+import { AuthenticationService } from './services/authenticationservices/authentication.service';
+import { CreateuserService } from './services/authenticationservices/createuser.service';
+import { TokenService } from './services/authenticationservices/token.service'; 
 
 import { BuysComponent } from './components/buys/buys.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -16,6 +19,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     ProductosComponent,
     RegisterComponent,
     ReportsComponent,
-    SettingsComponent
+    SettingsComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,10 @@ import { SettingsComponent } from './components/settings/settings.component';
     CommonModule
   ],
   providers: [
-    ImportscriptsService
+    ImportscriptsService,
+    TokenService,
+    CreateuserService,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

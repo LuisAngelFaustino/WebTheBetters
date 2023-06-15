@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="21.5">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#eb0029;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="Calendar" transform="translate(-2.25 -1.25)">
+        <path id="Trazado_50344" data-name="Trazado 50344" class="cls-1" d="M3.093 9.4h17.824"/>
+        <path id="Trazado_50345" data-name="Trazado 50345" class="cls-1" d="M16.442 13.31h.009"/>
+        <path id="Trazado_50346" data-name="Trazado 50346" class="cls-1" d="M12 13.31h.009"/>
+        <path id="Trazado_50347" data-name="Trazado 50347" class="cls-1" d="M7.558 13.31h.009"/>
+        <path id="Trazado_50348" data-name="Trazado 50348" class="cls-1" d="M16.442 17.2h.009"/>
+        <path id="Trazado_50349" data-name="Trazado 50349" class="cls-1" d="M12 17.2h.009"/>
+        <path id="Trazado_50350" data-name="Trazado 50350" class="cls-1" d="M7.558 17.2h.009"/>
+        <path id="Trazado_50351" data-name="Trazado 50351" class="cls-1" d="M16.044 2v3.291"/>
+        <path id="Trazado_50352" data-name="Trazado 50352" class="cls-1" d="M7.965 2v3.291"/>
+        <path id="Trazado_50353" data-name="Trazado 50353" d="M16.238 3.579H7.771C4.834 3.579 3 5.215 3 8.222v9.05C3 20.326 4.834 22 7.771 22h8.458C19.175 22 21 20.355 21 17.347V8.222c.009-3.007-1.816-4.643-4.762-4.643z" style="fill-rule:evenodd;fill:none;stroke:#eb0029;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+    </g>
+</svg>

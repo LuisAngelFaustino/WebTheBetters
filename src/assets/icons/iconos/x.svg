@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+    <g data-name="Grupo 66316">
+        <g data-name="Elipse 1110" style="stroke:#eb0029;stroke-width:2px;fill:none">
+            <circle cx="19" cy="19" r="19" style="stroke:none"/>
+            <circle cx="19" cy="19" r="18" style="fill:none"/>
+        </g>
+        <g data-name="Grupo 66312">
+            <path data-name="Stroke 1" d="M13.188.578a1.974 1.974 0 0 1 2.982 2.57l-.191.221-12.61 12.61a1.974 1.974 0 0 1-2.982-2.57l.191-.221z" transform="translate(10.398 10.396)" style="fill:#eb0029"/>
+            <path data-name="Stroke 2" d="M.578.578a1.974 1.974 0 0 1 2.57-.191l.221.191L15.99 13.2a1.974 1.974 0 0 1-2.57 2.982l-.221-.191L.578 3.369a1.974 1.974 0 0 1 0-2.791z" transform="translate(10.39 10.391)" style="fill:#eb0029"/>
+        </g>
+    </g>
+</svg>

@@ -8,12 +8,6 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['../../app.component.scss']
 })
 export class ProductosComponent {
-  // nameProduct = new FormControl('',[Validators.required, Validators.maxLength(50)]);
-  // Password = new FormControl('',[Validators.required, Validators.maxLength(50)]);
-  // select = new FormControl('0');
-  // agreecheck = new FormControl(false);
-  // radioForm = new FormControl('radio-2');
-
   form = new FormGroup({
     nameProduct: new FormControl('',[Validators.required]),
     select: new FormControl('0'),
@@ -24,9 +18,9 @@ export class ProductosComponent {
   });
 
   iconvisible: boolean;
-  constructor() {
+  constructor(
+  ) {
     this.iconvisible = true;
-
   }
   ngOnInit(): void { 
     this.form.get('nameProduct')?.valueChanges

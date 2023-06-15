@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+    <g data-name="Grupo 65759">
+        <g data-name="Arrow - Right Circle">
+            <path data-name="Stroke 1" d="M12.5 25A12.5 12.5 0 1 1 25 12.5 12.514 12.514 0 0 1 12.5 25zm0-23.125A10.625 10.625 0 1 0 23.126 12.5 10.637 10.637 0 0 0 12.5 1.875z" transform="rotate(-90 12.5 12.5)" style="fill:#eb0029"/>
+        </g>
+        <g data-name="Grupo 8105">
+            <path data-name="Stroke 5" d="M9.58 0a1.271 1.271 0 0 1 .173 2.531l-.173.012H1.271A1.271 1.271 0 0 1 1.1.012L1.271 0z" transform="translate(6.937 11.525)" style="fill:#eb0029"/>
+            <path data-name="Stroke 7" d="M1.271 0a1.272 1.272 0 0 1 1.26 1.1l.012.173V9.58a1.271 1.271 0 0 1-2.531.173L0 9.58V1.271A1.271 1.271 0 0 1 1.271 0z" transform="translate(11.092 7.372)" style="fill:#eb0029"/>
+        </g>
+    </g>
+</svg>

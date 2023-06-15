@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var AOS: any;
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  ngOnInit(): void { 
+    AOS.init({
+      duration: 2000,
+    })
+  }
 }

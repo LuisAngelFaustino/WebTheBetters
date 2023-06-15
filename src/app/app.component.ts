@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ImportscriptsService} from './services/utilities/importscripts.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WebappTheBetters';
-  constructor(  
+  constructor( 
+    private _ImportScript: ImportscriptsService 
   ) {
+    _ImportScript.ImportaArchivo(["amaran/amaran"]);
+    _ImportScript.ImportaArchivo(["amaran/acciones"]);
+    _ImportScript.ImportaArchivo(["Global"]);
     //disable developer tools
     if (window.location.hostname === 'localhost') {
       //disable context menu (right click)
